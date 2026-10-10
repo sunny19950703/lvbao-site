@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>绿宝官网改版方案｜新旧对比与上线步骤</title>
+<style>
+:root{--g:#0f8a4a;--gd:#0a4d2c;--ink:#14201a;--mut:#5d6b63;--bg:#f5f8f6;--line:#e3ebe6;--red:#c0392b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:var(--ink);line-height:1.75;background:var(--bg);-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.top{background:linear-gradient(130deg,var(--gd),var(--g));color:#fff;padding:60px 0 50px}
+.top small{opacity:.8;letter-spacing:.1em}
+.top h1{font-size:clamp(26px,4vw,38px);margin:8px 0 10px;line-height:1.3}
+.top p{opacity:.9;max-width:640px}
+.top .btn{display:inline-block;margin-top:22px;background:#fff;color:var(--g);font-weight:700;padding:11px 24px;border-radius:999px;text-decoration:none}
+section{background:#fff;border-radius:18px;padding:34px 34px;margin:24px 0;border:1px solid var(--line)}
+h2{font-size:22px;margin-bottom:6px}
+h2 span{color:var(--g);margin-right:8px}
+.sub{color:var(--mut);margin-bottom:20px;font-size:14.5px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cmp figure{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cmp img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.cmp figcaption{padding:10px 14px;font-weight:700;font-size:14px;background:var(--bg)}
+.cmp figure:first-child figcaption{color:var(--mut)}
+.cmp figure:last-child figcaption{color:var(--g)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:12px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--bg);font-size:13.5px;color:var(--mut);font-weight:600}
+td:first-child{font-weight:600;white-space:nowrap}
+.bad{color:var(--red)}
+.good{color:var(--g)}
+ul.l{padding-left:20px;display:grid;gap:6px}
+.opt{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.o{border:1px solid var(--line);border-radius:14px;padding:20px;position:relative}
+.o.rec{border:2px solid var(--g)}
+.o .badge{position:absolute;top:-11px;left:16px;background:var(--g);color:#fff;font-size:12px;padding:1px 10px;border-radius:999px}
+.o h3{font-size:16.5px;margin-bottom:8px}
+.o p{font-size:13.5px;color:var(--mut);margin-bottom:6px}
+.o b{color:var(--ink)}
+.steps{counter-reset:s;display:grid;gap:12px}
+.st{display:flex;gap:14px;align-items:flex-start}
+.st::before{counter-increment:s;content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:#e8f6ee;color:var(--g);font-weight:800;display:flex;align-items:center;justify-content:center}
+.st div{font-size:14.5px}
+.st small{display:block;color:var(--mut)}
+.need{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.need div{background:var(--bg);border-radius:10px;padding:12px 14px;font-size:14px}
+.note{font-size:13px;color:var(--mut);margin-top:14px}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:10px 0 40px}
+@media(max-width:720px){section{padding:24px 18px}.cmp,.opt,.need{grid-template-columns:1fr}td:first-child{white-space:normal}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <small>浙江绿宝环保科技有限公司 · 官网改版</small>
+  <h1>官网改版方案：新旧对比与上线步骤</h1>
+  <p>在不改变公司信息、产品和联系方式的前提下，重新设计官网的版式和内容结构，让客户打开就能看到产品、实力和联系方式，手机上也好看好用。</p>
+  <a class="btn" href="./index.html" target="_blank">打开新版官网预览 →</a>
+</div></div>
+
+<div class="wrap">
+
+<section>
+  <h2><span>01</span>首页对比</h2>
+  <p class="sub">左边是现在的官网，右边是新版（截图为电脑端首屏）。</p>
+  <div class="cmp">
+    <figure><img src="images/plan/old.webp" alt="原官网首页"><figcaption>现在的官网</figcaption></figure>
+    <figure><img src="images/plan/new.webp" alt="新版官网首页"><figcaption>新版官网</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2><span>02</span>现在的官网存在的问题</h2>
+  <p class="sub">以下问题都是在 zj-lvbao.com 上实际看到的。</p>
+  <table>
+    <tr><th>问题</th><th>具体情况</th><th>影响</th></tr>
+    <tr><td class="bad">建站模板文字没删</td><td>页面顶部隐藏文字是"XXX模型有限公司 全力打造专业的雕刻机品牌"；"公司展示"页标题是"产品展示3281 副标题"</td><td>被搜索引擎抓到，客户搜索时可能看到这些错字，显得不专业</td></tr>
+    <tr><td class="bad">"6 大核心优势"有错字</td><td>如"低质量管理体系""采拥有先进的化工设备""产品设计安装售后"，句子不通顺</td><td>"低质量"三个字对化学品企业很伤</td></tr>
+    <tr><td class="bad">资讯停在 2019 年</td><td>共 5 篇，全部是 2019-07-31 发布</td><td>客户会以为网站没人管、公司不活跃</td></tr>
+    <tr><td class="bad">产品只有名字和图</td><td>33 款产品，没有用途说明、没有询价入口</td><td>客户看完不知道下一步该做什么</td></tr>
+    <tr><td class="bad">实力展示分散</td><td>工厂照片、证书、厂区视频藏在二级页面，首页几乎看不到</td><td>源头工厂、IATF 16949 等最有说服力的信息没有被看到</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span>03</span>新版改了什么</h2>
+  <p class="sub">所有文字、图片、数据都来自现有官网，没有新增未经确认的宣传内容。</p>
+  <table>
+    <tr><th>版块</th><th>改法</th></tr>
+    <tr><td>首屏</td><td>用工厂实拍视频做背景，一句话说清"做什么 + 源头工厂 + 可贴牌"，直接放热线按钮和认证标签</td></tr>
+    <tr><td>数据条</td><td>成立年份、占地、面积、自动化比例、产品大类，5 个数字一眼看完</td></tr>
+    <tr><td>产品中心</td><td>33 款产品按 6 大类一键切换；点开看大图，带"咨询报价"和"淘宝购买"按钮</td></tr>
+    <tr><td>贴牌合作</td><td>单独一条 OEM / ODM 合作入口，方便经销商、车队、门店联系</td></tr>
+    <tr><td>核心优势</td><td>原来的 6 条重写成通顺的短句，错字全部修正</td></tr>
+    <tr><td>工厂 + 证书</td><td>工厂实景和 6 张证书搬到首页，点击看大图</td></tr>
+    <tr><td>联系我们</td><td>热线、刘总手机、邮箱、地址都能直接点：手机上点电话就拨号，点地址就导航</td></tr>
+    <tr><td>手机端</td><td>专门适配手机屏幕，底部常驻"电话咨询"按钮</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span>04</span>怎么上线（三选一）</h2>
+  <p class="sub">现在看到的预览链接只是临时给您看效果的，正式上线要放到国内的服务器上，并继续使用 zj-lvbao.com 这个域名。</p>
+  <div class="opt">
+    <div class="o rec"><span class="badge">推荐</span>
+      <h3>A. 国内云服务器 / 静态网站托管</h3>
+      <p>把新版网页直接放到阿里云、腾讯云等国内服务商。</p>
+      <p><b>优点</b>：国内打开快，完全按新版设计，以后改内容也方便。</p>
+      <p><b>注意</b>：要在新服务商那里重新办理网站备案接入，一般需要 1–3 周（以管局审核为准）。</p>
+    </div>
+    <div class="o">
+      <h3>B. 继续用凡科</h3>
+      <p>在凡科后台按新版的结构和文字重新搭一遍。</p>
+      <p><b>优点</b>：不用换服务商，备案不动。</p>
+      <p><b>注意</b>：受凡科模板限制，视频背景、产品分类切换等效果只能尽量接近。</p>
+    </div>
+    <div class="o">
+      <h3>C. 只先修错字</h3>
+      <p>暂不改版，先把模板残留文字和"6 大优势"错字在凡科后台改掉。</p>
+      <p><b>优点</b>：当天就能做完。</p>
+      <p><b>注意</b>：只能解决最明显的问题，网站整体观感不变。</p>
+    </div>
+  </div>
+  <p class="note">服务器、托管、凡科续费等费用以各服务商当时的报价为准，确定方案后再一起核算。</p>
+</section>
+
+<section>
+  <h2><span>05</span>上线步骤（以方案 A 为例）</h2>
+  <div class="steps">
+    <div class="st"><div><b>确认新版内容</b><small>您看完预览，提出要修改的地方（文字、图片、顺序等），我们改到满意为止</small></div></div>
+    <div class="st"><div><b>补充产品资料（可选）</b><small>如能提供每款产品的规格、用途、适用车型，会补进产品详情，客户咨询前就能看明白</small></div></div>
+    <div class="st"><div><b>开通国内托管</b><small>用公司名义在云服务商开通，账号归公司所有</small></div></div>
+    <div class="st"><div><b>办理备案接入</b><small>按服务商指引提交资料，等管局审核</small></div></div>
+    <div class="st"><div><b>切换域名</b><small>备案通过后，把 zj-lvbao.com 指向新网站；旧凡科站可以等新站稳定后再停</small></div></div>
+    <div class="st"><div><b>上线检查</b><small>电脑、手机各检查一遍，提交百度收录</small></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span>06</span>需要贵公司配合的事</h2>
+  <div class="need">
+    <div>✅ 确认新版上的公司介绍、数据、联系方式是否仍然准确</div>
+    <div>✅ 域名 zj-lvbao.com 的管理账号（或由贵公司同事操作解析）</div>
+    <div>✅ 凡科账号的到期时间（决定什么时候切换最合适）</div>
+    <div>✅ 是否保留淘宝店铺链接，是否有新的店铺或小程序</div>
+    <div>✅ 产品规格、用途资料（有就补，没有可以先上线）</div>
+    <div>✅ 近期的公司动态或新品照片（用来更新"行业资讯"）</div>
+  </div>
+</section>
+
+</div>
+<footer>本方案及新版预览仅供浙江绿宝环保科技有限公司内部查看</footer>
+</body>
+</html>
